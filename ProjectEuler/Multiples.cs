@@ -1,36 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEuler {
     public static class Multiples {
 
         public static int Sum(List<int> multiples, int max)
         {
-            var total = 0;
-            foreach (var multiple in GetMultiples(multiples, max))
-            {
-                total += multiple;
-            }
-            return total;
+            return CombineAllMultiples(multiples, max).Sum();
         }
 
-        private static List<int> GetMultiples(List<int> multiples, int max)
+        private static IEnumerable<int> CombineAllMultiples(IEnumerable<int> multiples, int max)
+        {
+            return multiples.Aggregate(new List<int>(), (current, n) => GetMultiples(max, n, current));
+        }
+
+        private static List<int> GetMultiples(int max, int multiple, List<int> list)
         {
             var output = new List<int>();
-            foreach ( var n in multiples )
+            if (list != null) output.AddRange(list);
+            for (var i = multiple; i < max; i += multiple)
             {
-                for (var i = n; i < max; i += n)
-                {
-                    if (!output.Contains(i))
-                    {
-                        output.Add(i);
-                    }
-                }
+                if (!output.Contains(i)) output.Add(i);
             }
             return output;
-        } 
+        }
     }
 }
