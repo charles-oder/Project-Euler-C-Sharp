@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler", "ProjectEuler\ProjectEuler.csproj", "{43D4155E-6525-4AC2-AE89-75135A6581DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler.Tests", "ProjectEuler.Tests\ProjectEuler.Tests.csproj", "{748E860F-DFD5-4198-9A75-D32D1B52178E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{43D4155E-6525-4AC2-AE89-75135A6581DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D4155E-6525-4AC2-AE89-75135A6581DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43D4155E-6525-4AC2-AE89-75135A6581DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748E860F-DFD5-4198-9A75-D32D1B52178E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748E860F-DFD5-4198-9A75-D32D1B52178E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748E860F-DFD5-4198-9A75-D32D1B52178E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748E860F-DFD5-4198-9A75-D32D1B52178E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
