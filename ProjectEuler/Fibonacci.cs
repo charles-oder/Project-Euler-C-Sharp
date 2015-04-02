@@ -5,11 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectEuler {
-    public static class Fibonacci {
-        public static IEnumerable<int> GetSequence(int count)
+    public class Fibonacci {
+        private int count;
+
+        public Fibonacci(int count)
+        {
+            this.count = count;
+        }
+
+        public IEnumerable<int> GetSequence()
         {
             var output = new List<int>();
-            var previousValues = new [] {0, 1};
+            var previousValues = new[] { 0, 1 };
             for (var i = 0; i < count; i++)
             {
                 var nextValue = previousValues[0] + previousValues[1];
@@ -18,7 +25,7 @@ namespace ProjectEuler {
                 previousValues[1] = nextValue;
             }
             return output;
-        }
+        } 
 
         public static IEnumerable<int> GetSequenceForMax(int max)
         {
