@@ -23,7 +23,7 @@ namespace ProjectEuler.Tests
             var expectedArray = new[] { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
             var fib = new Fibonacci();
             fib.Max = 100;
-            var actualArray = Fibonacci.GetSequenceForMax(100);
+            var actualArray = fib.GetSequence();
             Assert.IsTrue(expectedArray.SequenceEqual(actualArray), "Arrays do not match!");
         }
 
