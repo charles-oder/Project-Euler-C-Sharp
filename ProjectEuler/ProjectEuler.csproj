@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayFilter.cs" />
     <Compile Include="Fibonacci.cs" />
     <Compile Include="Multiples.cs" />
     <Compile Include="Program.cs" />

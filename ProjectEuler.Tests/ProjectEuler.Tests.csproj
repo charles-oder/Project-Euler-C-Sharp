@@ -54,7 +54,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ArrayFilterTests.cs" />
     <Compile Include="FibonacciTests.cs" />
     <Compile Include="MultiplesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
