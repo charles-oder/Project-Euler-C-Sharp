@@ -33,10 +33,23 @@ namespace ProjectEuler.Tests
             var fib = new Fibonacci
             {
                 Max = 100,
-                Filter = x => x % 3 == 0
+                Filter = x => x % 2 == 0
             };
             var actualArray = fib.GetSequence();
             Assert.IsTrue(expectedArray.SequenceEqual(actualArray), "Arrays do not match!");
+        }
+
+        [Test]
+        public void SumOfFibonacciNumbersUnderFourMillion()
+        {
+            const int expectedValue = 4613732;
+            var fib = new Fibonacci
+            {
+                Max = 4000000,
+                Filter = x => x%2 == 0
+            };
+            var actualValue = fib.GetSequence().Sum();
+            Assert.AreEqual(expectedValue, actualValue);
         }
 
 
