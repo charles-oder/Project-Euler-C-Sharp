@@ -52,5 +52,15 @@ namespace ProjectEuler.Tests
             Assert.AreEqual(expectedList, generator.GetPrimeFactors());
         }
 
+        [Test]
+        public void GetLargestPrimeFactor()
+        {
+            long testValue = 600851475143;
+            long expectedValue = 6857;
+            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+
+            Assert.AreEqual(expectedValue, generator.GetLargestPrimeFactor());
+        }
+
     }
 }

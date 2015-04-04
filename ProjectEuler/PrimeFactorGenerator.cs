@@ -33,16 +33,19 @@ namespace ProjectEuler
             _primeFactors = new HashSet<long>();
             for (long i = 2; i <= Math.Sqrt(_value); i++)
             {
-                if ((_value % i == 0) && IsPrime(i))
+                if ((_value%i != 0) || !IsPrime(i)) continue;
+                _primeFactors.Add(i);
+                if (IsPrime(_value/i))
                 {
-                    _primeFactors.Add(i);
-                    if (IsPrime(_value/i))
-                    {
-                        _primeFactors.Add(_value/i);
-                    }
+                    _primeFactors.Add(_value/i);
                 }
             }
             return _primeFactors.ToList();
+        }
+
+        public long GetLargestPrimeFactor()
+        {
+            return GetPrimeFactors().Concat(new long[] {0}).Max();
         }
     }
 }
