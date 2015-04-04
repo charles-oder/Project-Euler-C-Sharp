@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace ProjectEuler.Tests
 {
@@ -23,5 +24,33 @@ namespace ProjectEuler.Tests
             Assert.IsFalse(PrimeFactorGenerator.IsPrime(100));
             Assert.IsFalse(PrimeFactorGenerator.IsPrime(30000000));
         }
+
+        [Test]
+        public void GetPrimeFactorsOfPerfectSquare() {
+            long testValue = 841;
+            List<long> expectedList = new List<long> { 29 };
+            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+
+            Assert.AreEqual(expectedList, generator.GetPrimeFactors());
+        }
+
+        [Test]
+        public void GetPrimeFactorsOfProductOfPrimes() {
+            long testValue = 55;
+            List<long> expectedList = new List<long> { 5, 11 };
+            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+
+            Assert.AreEqual(expectedList, generator.GetPrimeFactors());
+        }
+
+        [Test]
+        public void GetPrimeFactors() {
+            var testValue = 13195;
+            List<long> expectedList = new List<long> { 5, 7, 13, 29 };
+            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+
+            Assert.AreEqual(expectedList, generator.GetPrimeFactors());
+        }
+
     }
 }
