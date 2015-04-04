@@ -17,5 +17,17 @@ namespace ProjectEuler
             return list;
         }
 
+        public static bool IsPalindrome(int value)
+        {
+            var digits = CreateDigitList(value);
+            for (var i = 0; i < digits.Count/2; i ++) 
+            {
+                if (digits[i] != digits[digits.Count - i - 1])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

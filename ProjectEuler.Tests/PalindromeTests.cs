@@ -17,5 +17,16 @@ namespace ProjectEuler.Tests
             Assert.AreEqual( expectedList, palindromeDigitList);
         }
 
+        [Test]
+        public void IsPalindromeOnPalindrome() {
+            const int testValue = 9009;
+            Assert.IsTrue(Palindrome.IsPalindrome(testValue));
+        }
+
+        [Test]
+        public void IsPalindromeOnNonPalindrome() {
+            const int testValue = 9019;
+            Assert.IsFalse(Palindrome.IsPalindrome(testValue));
+        }
     }
 }
