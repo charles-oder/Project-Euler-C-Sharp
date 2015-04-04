@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ProjectEuler
 {
@@ -28,6 +29,23 @@ namespace ProjectEuler
                 }
             }
             return true;
+        }
+
+        public static int FindLargestPalidromeOfProducts(int digitLength)
+        {
+            var max = Math.Pow(10, digitLength);
+            var largestPalindrome = 0;
+            for (var x = 1; x < max; x++)
+            {
+                for (var y = 1; y < max; y++)
+                {
+                    if (IsPalindrome(x*y) && x*y > largestPalindrome)
+                    {
+                        largestPalindrome = x*y;
+                    }
+                }
+            }
+            return largestPalindrome;
         }
     }
 }

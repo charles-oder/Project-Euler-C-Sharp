@@ -28,5 +28,14 @@ namespace ProjectEuler.Tests
             const int testValue = 9019;
             Assert.IsFalse(Palindrome.IsPalindrome(testValue));
         }
+
+        [Test]
+        public void FindLargestPalidromeOfProducts() {
+            const int expectedValue = 9009;
+            var actualValue = Palindrome.FindLargestPalidromeOfProducts(2);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
     }
 }
