@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Fibonacci.cs" />
     <Compile Include="Multiples.cs" />
+    <Compile Include="Palindrome.cs" />
     <Compile Include="PrimeFactorGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

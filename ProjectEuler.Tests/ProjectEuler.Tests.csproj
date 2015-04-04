@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="FibonacciTests.cs" />
     <Compile Include="MultiplesTests.cs" />
+    <Compile Include="PalindromeTests.cs" />
     <Compile Include="PrimeFactorGeneratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
