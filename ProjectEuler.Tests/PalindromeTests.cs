@@ -30,9 +30,17 @@ namespace ProjectEuler.Tests
         }
 
         [Test]
-        public void FindLargestPalidromeOfProducts() {
+        public void FindLargestPalidromeOfTwoDigitProducts() {
             const int expectedValue = 9009;
             var actualValue = Palindrome.FindLargestPalidromeOfProducts(2);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [Test]
+        public void FindLargestPalidromeOfThreeDigitProducts() {
+            const int expectedValue = 906609;
+            var actualValue = Palindrome.FindLargestPalidromeOfProducts(3);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
