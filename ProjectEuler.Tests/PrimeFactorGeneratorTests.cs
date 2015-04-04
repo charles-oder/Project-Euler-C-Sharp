@@ -27,27 +27,27 @@ namespace ProjectEuler.Tests
 
         [Test]
         public void GetPrimeFactorsOfPerfectSquare() {
-            long testValue = 841;
-            List<long> expectedList = new List<long> { 29 };
-            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+            const long testValue = 841;
+            var expectedList = new List<long> { 29 };
+            var generator = new PrimeFactorGenerator(testValue);
 
             Assert.AreEqual(expectedList, generator.GetPrimeFactors());
         }
 
         [Test]
         public void GetPrimeFactorsOfProductOfPrimes() {
-            long testValue = 55;
-            List<long> expectedList = new List<long> { 5, 11 };
-            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+            const long testValue = 55;
+            var expectedList = new List<long> { 5, 11 };
+            var generator = new PrimeFactorGenerator(testValue);
 
             Assert.AreEqual(expectedList, generator.GetPrimeFactors());
         }
 
         [Test]
         public void GetPrimeFactors() {
-            var testValue = 13195;
-            List<long> expectedList = new List<long> { 5, 7, 13, 29 };
-            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+            const int testValue = 13195;
+            var expectedList = new List<long> { 5, 7, 13, 29 };
+            var generator = new PrimeFactorGenerator(testValue);
 
             Assert.AreEqual(expectedList, generator.GetPrimeFactors());
         }
@@ -55,9 +55,9 @@ namespace ProjectEuler.Tests
         [Test]
         public void GetLargestPrimeFactor()
         {
-            long testValue = 600851475143;
-            long expectedValue = 6857;
-            PrimeFactorGenerator generator = new PrimeFactorGenerator(testValue);
+            const long testValue = 600851475143;
+            const long expectedValue = 6857;
+            var generator = new PrimeFactorGenerator(testValue);
 
             Assert.AreEqual(expectedValue, generator.GetLargestPrimeFactor());
         }
