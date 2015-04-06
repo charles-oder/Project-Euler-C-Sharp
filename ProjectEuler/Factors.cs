@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEuler {
     public class Factors {
         public static int GenerateSmallestDividendForSequence(int sequenceStart, int sequenceEnd)
         {
             var intList = new List<int>();
-            for (int i = sequenceStart; i <= sequenceEnd && i > 0; i++)
+            for (var i = sequenceStart; i <= sequenceEnd && i > 0; i++)
             {
                 intList.Add(i);
             }
@@ -31,14 +28,7 @@ namespace ProjectEuler {
 
         private static bool IsDivisibleByAllValues(int value, List<int> intList)
         {
-            foreach (var i in intList)
-            {
-                if (value%i != 0)
-                {
-                    return false;
-                }
-            }
-            return true;
+            return intList.All(i => value%i == 0);
         }
     }
 }
