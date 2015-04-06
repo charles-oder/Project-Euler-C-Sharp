@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="FactorsTests.cs" />
     <Compile Include="FibonacciTests.cs" />
     <Compile Include="MultiplesTests.cs" />
     <Compile Include="PalindromeTests.cs" />
