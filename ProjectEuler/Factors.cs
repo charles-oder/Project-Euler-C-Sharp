@@ -9,7 +9,7 @@ namespace ProjectEuler {
         public static int GenerateSmallestDividendForSequence(int sequenceStart, int sequenceEnd)
         {
             var intList = new List<int>();
-            for (int i = sequenceStart; i <= sequenceEnd; i++)
+            for (int i = sequenceStart; i <= sequenceEnd && i > 0; i++)
             {
                 intList.Add(i);
             }

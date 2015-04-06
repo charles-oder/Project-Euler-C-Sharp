@@ -10,10 +10,15 @@ namespace ProjectEuler.Tests {
     class FactorsTests {
 
         [Test]
-        public void GenerateProductOfFactorsOneThroughTen()
-        {
+        public void GenerateProductOfFactorsOneThroughTen() {
             var expectedValue = 2520;
             var actualValue = Factors.GenerateSmallestDividendForSequence(1, 10);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [Test]
+        public void GenerateProductOfFactorsOfWayTooBigNumbers() {
+            var expectedValue = 0;
+            var actualValue = Factors.GenerateSmallestDividendForSequence(int.MaxValue - 10, int.MaxValue);
             Assert.AreEqual(expectedValue, actualValue);
         }
     }
